@@ -27,7 +27,12 @@ namespace RIFS.Crypto.Sample.Controllers
         {
             var encryptedData = new SecurityText2048(dataToEncrypt);
             var result = encryptedData.Decrypt() + "\r\n" + encryptedData.Value;
-            return result;
+
+            var encryptedData2 = new SecurityText2048();
+            encryptedData2 = encryptedData;
+
+            var result2 = encryptedData2.Decrypt() + "\r\n" + encryptedData2.Value;
+            return result + "\r\n" + result2;
         }
 
         [HttpPost("Encrypt2048")]

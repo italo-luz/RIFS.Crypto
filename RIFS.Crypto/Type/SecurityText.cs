@@ -31,6 +31,11 @@ namespace RIFS.Crypto.Entity
             return rsaDecrypt.Decrypt2048(Constants.privateKeyRsa, Value);
         }
 
+        public SecurityText2048()
+        {
+
+        }
+
         public SecurityText2048(string value)
         {
             Value = value;
